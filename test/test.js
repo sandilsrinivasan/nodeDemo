@@ -36,18 +36,18 @@ describe('POST /api', function() {
     done();
   });
 
-  it('5 plus 0 equals 5', function(done) {
+  it('4 plus 0 equals 4', function(done) {
     request(app)
     .post('/api')
     .send({
-      "num1": 5,
+      "num1": 4,
       "num2": 0
     })
     .expect(200)
     .end(function(err, res) {
       if (err)
         done(err);
-      res.body.should.have.property('sum', 5);
+      res.body.should.have.property('sum', 4);
     });
     done();
   });
