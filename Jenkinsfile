@@ -10,8 +10,7 @@ pipeline {
     stage('Test') {
       steps {
         echo 'Testing Stage'
-        sh 'export PATH=/usr/local/bin:$PATH'
-        sh 'npm test'
+        sh 'export PATH=/usr/local/bin:$PATH && npm test'
       }
     }
     stage('Deploy') {
