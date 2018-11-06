@@ -10,9 +10,11 @@ app.post('/api', (req, res) => {
 
     console.log("Received request: " + JSON.stringify(req.body));
     var sum = req.body.num1 + req.body.num2;
-    res.json({
+    var rb = {
         "sum" : sum
-    })
+    };
+    res.json(rb)
+    console.log("Sent response: " + JSON.stringify(rb));
 
 });
 
