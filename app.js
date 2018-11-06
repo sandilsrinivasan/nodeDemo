@@ -9,7 +9,7 @@ app.listen(8511 , "localhost" , () => console.log('Listening on 8511'));
 app.post('/api', (req, res) => {
 
     console.log("Received request: " + JSON.stringify(req.body));
-    var sum = req.body.num + req.body.num2;
+    var sum = req.body.num1 + req.body.num2;
     var rb = {
         "sum" : sum
     };
